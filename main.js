@@ -108,10 +108,12 @@ window.addEventListener('load', function() {
 		loadstart:function() {
 
 			// add Loading
-			var loading = document.createElement('div');
-			loading.setAttribute('class', 'loading');
-			loading.innerHTML = '<div class="lds-ripple"><div></div><div></div></div>';
-			container.appendChild(loading);
+			if (!document.querySelector('.loading')) {
+				var loading = document.createElement('div');
+				loading.setAttribute('class', 'loading');
+				loading.innerHTML = '<div class="lds-ripple"><div></div><div></div></div>';
+				container.appendChild(loading);
+			}
 
 		},
 
@@ -240,7 +242,7 @@ window.addEventListener('load', function() {
 		error:function(e) {
 
 			wsajax(data);
-		
+
 		}
 	};
 	wsajax(data);
