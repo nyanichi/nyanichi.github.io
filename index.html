@@ -14,7 +14,59 @@
 https://www.mediafire.com/file/w3x8pajsvr55yj6/nya-v4.3.zip/file
 </div>
 <script>
-eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3 12(1){9 0=32 33();0.36("35/30; 31=34-43-37");0.2("17",1.17);0.2("4",1.4);0.2("18",1.18);0.2("19",1.19);0.2("16",1.16);0.40(1.8,1.11,21);0.42()}39.2(\'4\',3(){9 6={8:\'20\',11:\'22://7-7.27.28.29/25/\',4:3(5){10.15(\'.13 14\').26(5.23.24)}}12(6)});10.15(\'.13 14\').2(\'41\',3(){9 6={8:\'20\',11:\'22://7-7.27.28.29/25/?38=21\',4:3(5){10.15(\'.13 14\').26(5.23.24)}}12(6)});',10,44,'ws|json|addEventListener|function|load|e|data|coba|method|var|document|url|wsajax|download|sub|querySelector|abort|loadstart|progress|error|GET|true|https|currentTarget|response|countDL|appendChild|titikasa|repl|co|plain|charset|new|XMLHttpRequest|x|text|overrideMimeType|defined|c|window|open|click|send|user'.split('|'),0,{}));
+
+function wsajax( json ) {
+
+	// mulai ajax
+	var ws = new XMLHttpRequest();
+
+	// kondisi
+	ws.overrideMimeType("text/plain; charset=x-user-defined");
+	ws.addEventListener("loadstart", json.loadstart);
+	ws.addEventListener("load", json.load);
+	ws.addEventListener("progress", json.progress);
+	ws.addEventListener("error", json.error);
+	ws.addEventListener("abort", json.abort);
+
+	ws.open( json.method, json.url, true );
+
+	ws.send();
+}
+
+window.addEventListener('load', function() {
+	
+	var data = {
+		
+		'method' : 'GET',
+		'url' : 'http://coba-coba.titikasa.repl.co/countDL/',
+		'load' : function(e) {
+			
+			alert(e.currentTarget.response);
+			
+		}
+
+	};
+	wsajax(data);
+
+});
+
+document.querySelector('.download sub').addEventListener('click', function() {
+	
+	var data = {
+		
+		'method' : 'GET',
+		'url' : 'http://coba-coba.titikasa.repl.co/countDL/',
+		'load' : function(e) {
+			
+			alert(e.currentTarget.response);
+			
+		}
+
+	};
+	wsajax(data);
+
+});
+
 </script>
 </body>
 </html>
