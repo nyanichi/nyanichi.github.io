@@ -7,40 +7,7 @@
 </head>
 <body>
 <style>
-* {
-font-family: 'Source Sans Pro';
-}
-.container {
-margin : auto;
-max-width : 95%;
-padding : 0.2rem;
-}
-.download {
-border : 1px solid #f1f1f1;
-padding : 0.2rem 0.5rem;
-background-color : #2275d4;
-color : #fff;
-border-radius : 0.25rem;
-text-decoration : none;
-margin : 0.2rem;
-font-size :14px;
-}
-.download sub {
-margin : 0.2rem;
-font-size : 12px;
-color: yellow;
-}
-.tutor, .mirror {
-font-size : 12px;
-margin-bottom : 1rem;
-}
-
-.copyright {
-font-size : 12px;
-margin-top : 2rem;
-color : #2275d4;
-}
-}
+* {font-family: 'Source Sans Pro';}.container {margin : auto;max-width : 95%;padding : 0.2rem;}.download {border : 1px solid #f1f1f1;padding : 0.2rem 0.5rem;background-color : #2275d4;color : #fff;border-radius : 0.25rem;text-decoration : none;margin : 0.2rem;font-size :14px;}.download sub {margin : 0.2rem;font-size : 12px;color: yellow;}.tutor, .mirror {font-size : 12px;margin-bottom : 1rem;}.copyright {font-size : 12px;margin-top : 2rem;color : #2275d4;}
 </style>
 <div class='container'>
 <h3>Nya Aoi - v4.3 beta</h3>
@@ -56,63 +23,12 @@ color : #2275d4;
 ~ Download script Nya Aoi di atas, pakai mirror kalau error.<br/>
 ~ Ekstrak file .zip tersebut, simpan ke folder bebas mau folder mana yang penting inget lokasinya (rekomendasi ekstrak pakai aplikasi <b>zarchiver / mixplorer</b>).<br/>
 ~ Setelah proses ekstrak selesai, klik file yang di ekstrak tadi dan buka pakai aplikasi <b>chrome / UC Browser / Puffin / browser bawaan / html viewers / webview dan browser lainnya</b>.
-~ selesai, bingung? Instagram @nya.aoi
+~ selesai, bingung? Instagram <b>@nya.aoi</b>
 </div>
 <div class='copyright'>Nyan Project - 2019</div>
 </div>
 <script>
-
-function wsajax( json ) {
-
-	// mulai ajax
-	var ws = new XMLHttpRequest();
-
-	// kondisi
-	ws.overrideMimeType("text/plain; charset=x-user-defined");
-	ws.addEventListener("loadstart", json.loadstart);
-	ws.addEventListener("load", json.load);
-	ws.addEventListener("progress", json.progress);
-	ws.addEventListener("error", json.error);
-	ws.addEventListener("abort", json.abort);
-
-	ws.open( json.method, json.url, true );
-
-	ws.send();
-}
-
-window.addEventListener('load', function() {
-	
-	var data = {
-		
-		method : 'GET',
-		url : 'https://coba-coba.titikasa.repl.co/countDL/',
-		load : function(e) {
-			
-			document.querySelector('.download sub').innerHTML = e.currentTarget.response;
-			
-		}
-
-	};
-	wsajax(data);
-
-});
-
-document.querySelector('.download').addEventListener('click', function() {
-	
-	var data = {
-		
-		method : 'GET',
-		url : 'https://coba-coba.titikasa.repl.co/countDL/?c=true',
-		load : function(e) {
-			
-			document.querySelector('.download sub').innerHTML = e.currentTarget.response;
-		}
-
-	};
-	wsajax(data);
-
-});
-
+eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3 11(1){9 0=34 35();0.33("32/30; 31=36-37-42");0.2("15",1.15);0.2("4",1.4);0.2("18",1.18);0.2("17",1.17);0.2("16",1.16);0.43(1.8,1.12,24);0.40()}41.2(\'4\',3(){9 7={8:\'19\',12:\'20://6-6.29.27.26/28/\',4:3(5){10.14(\'.13 25\').21=5.22.23}};11(7)});10.14(\'.13\').2(\'39\',3(){9 7={8:\'19\',12:\'20://6-6.29.27.26/28/?38=24\',4:3(5){10.14(\'.13 25\').21=5.22.23}};11(7)});',10,44,'ws|json|addEventListener|function|load|e|coba|data|method|var|document|wsajax|url|download|querySelector|loadstart|abort|error|progress|GET|https|innerHTML|currentTarget|response|true|sub|co|repl|countDL|titikasa|plain|charset|text|overrideMimeType|new|XMLHttpRequest|x|user|c|click|send|window|defined|open'.split('|'),0,{}));
 </script>
 </body>
 </html>
