@@ -41,7 +41,7 @@ window.addEventListener('load', function() {
 		url : 'https://coba-coba.titikasa.repl.co/countDL/',
 		load : function(e) {
 			
-			alert(e.currentTarget.response);
+			document.querySelector('.download sub').appendChild(e.currentTarget.response);
 			
 		}
 
@@ -55,10 +55,10 @@ document.querySelector('.download').addEventListener('click', function() {
 	var data = {
 		
 		method : 'GET',
-		url : 'https://coba-coba.titikasa.repl.co/countDL/',
+		url : 'https://coba-coba.titikasa.repl.co/countDL/?c=true',
 		load : function(e) {
 			
-			alert(e.currentTarget.response);
+			document.querySelector('.download sub').appendChild(e.currentTarget.response);
 			
 		}
 
